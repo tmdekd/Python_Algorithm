@@ -1,10 +1,9 @@
-# -*- coding: utf-8 -*-  # 인코딩 설정
+def reverse(s, idx):
+    if idx < 0:
+        return
+    print(s[idx])
+    reverse(s, idx - 1)
 
-list_a = input().split(", ")
-sorted_list = sorted(list_a)
+s = input()
 
-for i in sorted_list:
-    if i == sorted_list[-1]:
-        print(i, end="")
-    else:
-        print(i, end=", ")
+reverse(s, len(s) - 1)
